@@ -10,7 +10,7 @@ services:
 
 before_install:
     - docker build -t cocotb-image cocotb/
-    - docker run --name n2t -d -v $PWD:/nand2tetris sleep infinity
+    - docker run --name n2t -d -v $PWD:/nand2tetris cocotb-image sleep infinity
 
 script:
     - docker exec n2t /bin/bash -c "cd /nand2tetris && make"
