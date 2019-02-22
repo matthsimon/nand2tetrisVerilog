@@ -1,0 +1,15 @@
+MODS += not
+MODS += not16
+MODS += and
+MODS += and16
+MODS += or
+MODS += or8way
+MODS += or16
+MODS += xor
+MODS += mux
+MODS += mux16
+MODS += mux4way16
+MODS += mux8way16
+MODS += dmux
+MODS += dmux4way
+MODS += dmux8way
