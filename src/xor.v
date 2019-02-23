@@ -1,4 +1,3 @@
-`include "not.v"
 module logical_xor (
     input a, b,
     output out

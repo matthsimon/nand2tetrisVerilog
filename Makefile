@@ -1,20 +1,20 @@
 COCOTB := $(PWD)/cocotb
 SRC := $(PWD)/src
-TESTDIRS := $(shell ls test)
-COMPILE_ARGS := $(foreach d, $(TESTDIRS), -I$(SRC)/$d)
+TESTDIR := $(PWD)/test
+COMPILE_ARGS := -I$(SRC)
 export
 
 MODS :=
-$(foreach d, $(TESTDIRS), $(eval include $(PWD)/test/$d/tests.mk))
+include modules.mk
 
 all: $(MODS)
 
 $(MODS):
-	$(foreach d, $(TESTDIRS), cd test/$d && $(MAKE) $@ MODS=$@)
+	cd $(TESTDIR) && $(MAKE) $@ MODS=$@
 
 clean:
 	@find . -name "obj" | xargs rm -rf
 	@find . -name "*.pyc" | xargs rm -rf
 	@find . -name "*results.xml" | xargs rm -rf
-	$(foreach d, $(TESTDIRS), cd test/$d && $(MAKE) clean)
+	cd $(TESTDIR) && $(MAKE) clean
 
