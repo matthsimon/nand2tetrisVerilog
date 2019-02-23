@@ -1,13 +1,9 @@
 `include "dmux.v"
 module dmux4way (
-    inp,
-    sel,
-    a, b, c, d
+    input inp,
+    input [1:0] sel,
+    output a, b, c, d
 );
-
-input inp;
-input [1:0] sel;
-output a, b, c, d;
 
 wire pick1, pick2;
 

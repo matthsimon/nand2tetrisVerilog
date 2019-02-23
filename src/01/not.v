@@ -1,9 +1,7 @@
 module logical_not (
-    a,
-    out
+    input a,
+    output out
 );
-
-input a, out;
 
 assign out = a ~& a;
 

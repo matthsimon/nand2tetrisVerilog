@@ -1,13 +1,9 @@
 `include "dmux4way.v"
 module dmux8way (
-    inp,
-    sel,
-    a, b, c, d, e, f, g, h
+    input inp,
+    input [2:0] sel,
+    output a, b, c, d, e, f, g, h
 );
-
-input inp;
-input [2:0] sel;
-output a, b, c, d, e, f, g, h;
 
 wire pick1, pick2;
 

@@ -1,13 +1,8 @@
 `include "not.v"
 module dmux (
-    inp,
-    sel,
-    a,
-    b
+    input inp, sel,
+    output a, b
 );
-
-input inp, sel;
-output a, b;
 
 wire nsel;
 

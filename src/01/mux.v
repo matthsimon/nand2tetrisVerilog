@@ -1,14 +1,8 @@
 `include "not.v"
 module mux (
-    a,
-    b,
-    sel,
-    out
+    input a, b, sel,
+    output out
 );
-
-input a, b;
-input sel;
-output out;
 
 wire nsel;
 
