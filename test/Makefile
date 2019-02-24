@@ -11,13 +11,18 @@ and: export TOPLEVEL=logical_and
 
 and16: export VERILOG_SOURCES += $(SRC)/not.v
 
-or: export VERILOG_SOURCES=$(SRC)/or.v
+or: export VERILOG_SOURCES=$(SRC)/or.v $(SRC)/not.v
 or: export TOPLEVEL=logical_or
+
+or16: export VERILOG_SOURCES += $(SRC)/not.v
 
 xor: export VERILOG_SOURCES=$(SRC)/xor.v $(SRC)/not.v
 xor: export TOPLEVEL=logical_xor
 
 halfadder: export VERILOG_SOURCES += $(SRC)/xor.v $(SRC)/and.v $(SRC)/not.v
+
+fulladder: export VERILOG_SOURCES += $(SRC)/xor.v $(SRC)/and.v $(SRC)/not.v
+fulladder: export VERILOG_SOURCES += $(SRC)/halfadder.v $(SRC)/or.v
 
 include $(COCOTB)/makefiles/Makefile.inc
 include $(COCOTB)/makefiles/Makefile.sim

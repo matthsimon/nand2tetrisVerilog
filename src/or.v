@@ -1,4 +1,3 @@
-`include "not.v"
 module logical_or (
     input a, b,
     output out
