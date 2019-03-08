@@ -27,6 +27,8 @@ fulladder: export VERILOG_SOURCES += $(SRC)/halfadder.v $(SRC)/or.v
 add16: export VERILOG_SOURCES += $(SRC)/xor.v $(SRC)/and.v $(SRC)/not.v
 add16: export VERILOG_SOURCES += $(SRC)/halfadder.v $(SRC)/fulladder.v $(SRC)/or.v
 
+inc16: export VERILOG_SOURCES += $(SRC)/xor.v $(SRC)/and16.v $(SRC)/not.v
+
 include $(COCOTB)/makefiles/Makefile.inc
 include $(COCOTB)/makefiles/Makefile.sim
 

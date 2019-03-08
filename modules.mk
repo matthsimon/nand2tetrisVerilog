@@ -6,6 +6,7 @@ MODS += dmux4way
 MODS += dmux8way
 MODS += fulladder
 MODS += halfadder
+MODS += inc16
 MODS += mux
 MODS += mux16
 MODS += mux4way16
