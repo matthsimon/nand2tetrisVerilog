@@ -1,6 +1,7 @@
 MODS += add16
 MODS += and
 MODS += and16
+MODS += alu
 MODS += dmux
 MODS += dmux4way
 MODS += dmux8way

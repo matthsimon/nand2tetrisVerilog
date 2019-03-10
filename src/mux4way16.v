@@ -1,4 +1,3 @@
-`include "mux.v"
 module mux4way16 (
     input [15:0] a, b, c, d,
     input [1:0] sel,

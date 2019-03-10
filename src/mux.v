@@ -1,4 +1,3 @@
-`include "not.v"
 module mux (
     input a, b, sel,
     output out
